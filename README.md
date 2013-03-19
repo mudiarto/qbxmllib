@@ -1,4 +1,3 @@
-
 ===============================================================
 qbxmllib
 ===============================================================
@@ -41,6 +40,17 @@ usage example :
     print root2.QBXMLMsgsRq.CompanyQueryRq[0].OwnerID
 
 
+Customization
+=============
+
+I found out that including the complete QBXML scheme will make a huge python files, which require a lot of memory.
+In my case - I am using Google AppEngine - the full QBXML schema won't fit on the memory. I need to customize it to reduce the size.
+
+That's where the xsdreducer comes into play. xsdreducer allow me to cut all unnecessary and unused branches just by commenting
+out all the parents that are not used.
+
+To customize it, edit qbxmlops120_min.xsd, and then find: <xsd:element name="QBXMLMsgsRq"> and <xsd:element name="QBXMLMsgsRs">,
+and then comment out all unnecessary elements that you don't use in your case.
 
 
 Contents
