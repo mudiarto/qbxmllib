@@ -1,0 +1,6 @@
+Reduce the size of the Xsd by deleteing the unnecessary declarations from it.
+
+
+Sometimes the Xsds hold much more declarations (simpletypes, complexTypes, elements), than needed to our application. In order to simplify the Xsd, first we have to define the declarations those necessary for our application. After that we have to find every declarations those used (directly and indirectly) by the necessary declarations. The remaining part of the xsd could be eliminated.
+This tool does this work. It parses the Xsds, determines which parts of the Xsd are in used, and remove the unused, unnecessary part of it.
+

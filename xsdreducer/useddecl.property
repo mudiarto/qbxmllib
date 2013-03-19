@@ -1,0 +1,5 @@
+#format:
+#{namespace}typename
+# example: {http://mycompany.com/myfolder}MyType
+# no namespace example: {}MyType
+

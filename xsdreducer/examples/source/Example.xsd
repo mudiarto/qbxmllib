@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://mycom.com/example" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://mycom.com/example">
+    <xsd:complexType name="MyContentType">
+        <xsd:annotation>
+         </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="RequestId" type="xsd:string"/>
+            <xsd:element name="EventId" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="MyUselessType">
+        <xsd:annotation>
+         </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Id" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="MyRequest">
+        <xsd:sequence>
+            <xsd:element name="MyContent" type="MyContentType" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="MyResponse">
+        <xsd:sequence>
+            <xsd:element name="MyContent" type="MyContentType" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:element name="MyRequestElement" type="MyRequest"/>
+
+</xsd:schema>

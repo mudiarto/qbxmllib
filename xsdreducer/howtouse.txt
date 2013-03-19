@@ -1,0 +1,22 @@
+XsdReducer
+
+This tool eliminates the unnecessary parts from the given XSD set. You have to give a folder where the set of Xsds are located. You also have to give the set of the types, those you use directly. The tool determines witch types you use directly or indirectly, and remove the useless types from the xsds.
+
+This tool has a Commandline and a Gui mode.
+
+GuiMode
+1. starting:
+java -cp XsdReducer.jar;lib\xsom-20081112.jar;lib\jaxb1-impl.jar  xsdreducer.XsdReducer
+2. Choose a source folder, where the Xsds are located!
+3. Choose a target folder, where the reduced Xsds will be written to!
+4. Select a namespace!
+5. Select the types, those you use directly!
+6. Repeat from 4. for all namespace!
+7. Push the “Reduce Xsd” button!
+8. You can find the reduced xsds (witch contains only the essential types) in the target folder.
+
+CommandLineMode:
+1. Edit the useddecl.property file! Add the directly used types or elements to it!
+2. start the tool:
+java -cp XsdReducer.jar;lib\xsom-20081112.jar;lib\jaxb1-impl.jar  xsdreducer.XsdReducer -sourceDir <source folder>  -targetDir <target folder> -property <property file> -verbose
+3. You can find the reduced xsds (witch contains only the essential types) in the target folder.
