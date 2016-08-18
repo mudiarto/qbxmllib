@@ -49,7 +49,7 @@ In my case - I am using Google AppEngine - the full QBXML schema won't fit on th
 That's where the xsdreducer comes into play. xsdreducer allow me to cut all unnecessary and unused branches just by commenting
 out all the parents that are not used.
 
-To customize it, edit qbxmlops120_min.xsd, and then find: <xsd:element name="QBXMLMsgsRq"> and <xsd:element name="QBXMLMsgsRs">,
+To customize it, edit qbxmlops120_min.xsd, and then find: ```<xsd:element name="QBXMLMsgsRq">``` and ```<xsd:element name="QBXMLMsgsRs">``,
 and then comment out all unnecessary elements that you don't use in your case.
 
 
@@ -80,11 +80,11 @@ Credits
 * QBXML:
   * from Intuit
   * see: http://developer.intuit.com/qbsdk-current/common/newosr/index.html.
-    You can find the .XSD schema files in the QuickBooks SDK. You should download and install the QuickBooks SDK,
-    then Browse to: C:\Program Files\Intuit\IDN\Common\tools\validator\
+    * You can find the .XSD schema files in the QuickBooks SDK. You should download and install the QuickBooks SDK, then Browse to: C:\Program Files\Intuit\IDN\Common\tools\validator\
 
 * generateDS:
-  * http://www.rexx.com/~dkuhlman/generateDS.html
+  * https://pypi.python.org/pypi/generateDS or  http://www.davekuhlman.org/generateDS.html
+    * Install using: `pip install generateDS`
 
 * xsdreducer:
   * http://www.abhortsoft.hu/xsdreducer/xsd_reducer.html
